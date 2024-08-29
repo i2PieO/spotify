@@ -1,7 +1,14 @@
+import getSounds from "@/actions/getSounds";
 import Header from "@/components/Header";
 import ListItem from "@/components/ListItem";
 
-export default function Home() {
+import PageContent from "./components/PageContent";
+
+export const revalidate = 0;
+
+export default async function Home() {
+  const sounds = await getSounds();
+
   return (
   <div className="
     bg-neutral-900
@@ -47,9 +54,7 @@ export default function Home() {
         Newest Sounds
       </h1>
     </div>
-    <div>
-      List of Sounds!
-    </div>
+    <PageContent sounds={sounds} />
    </div>
   </div>
   )
