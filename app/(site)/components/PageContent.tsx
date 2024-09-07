@@ -1,6 +1,7 @@
 "use client";
 
 import SoundItem from "@/components/SoundItem";
+import useOnPlay from "@/hooks/useOnPlay";
 import { Sound } from "@/types";
 
 interface PageContentProps {
@@ -10,6 +11,8 @@ interface PageContentProps {
 const PageContent: React.FC<PageContentProps> = ({
   sounds
 }) => {
+  const onPlay = useOnPlay(sounds);
+
   if (sounds.length === 0) {
     return (
       <div className="mt-4 text-neutral-400">
@@ -34,7 +37,7 @@ const PageContent: React.FC<PageContentProps> = ({
      {sounds.map((item) => (
       <SoundItem 
         key={item.id}
-        onClick={() => {}}
+        onClick={(id: string) => onPlay(id)}
         data={item}
       />
      ))}

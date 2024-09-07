@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.1",
+    "@radix-ui/react-slider": "^1.2.0",
     "@supabase/auth-helpers-nextjs": "^0.8.7",
     "@supabase/auth-helpers-react": "^0.4.2",
     "@supabase/auth-ui-react": "^0.4.7",
@@ -24,6 +25,7 @@
     "stripe": "^14.9.0",
     "tailwind-merge": "^2.1.0",
     "uniqid": "^5.4.0",
+    "use-sound": "^4.0.3",
     "zustand": "^4.5.5"
   },
   "devDependencies": {
